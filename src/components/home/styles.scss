@@ -1,0 +1,14 @@
+.home-page {
+  width: var(--full);
+
+  .wrapper {
+    width: 95%;
+    margin: 0 auto;
+
+    h1 {
+      font-weight: 400;
+      font-size: 25px;
+      color: var(--text-secondary);
+    }
+  }
+}

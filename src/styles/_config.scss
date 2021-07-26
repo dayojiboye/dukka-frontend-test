@@ -1,0 +1,122 @@
+@import "../../node_modules/hamburgers/dist/hamburgers";
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: var(--full);
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  width: var(--full);
+  height: var(--full);
+  background: var(--white);
+  color: var(--text-primary);
+}
+
+html._fixed,
+body._fixed {
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+#root {
+  max-width: var(--wrapper-max-width);
+  min-width: var(--wrapper-min-width);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  line-height: 1.4;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  outline: none;
+  font-family: inherit;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+// label {
+//   display: table;
+//   width: auto;
+//   margin-bottom: 10px;
+//   font-size: 14px;
+//   color: var(--text-dark);
+// }
+
+// input,
+// select {
+//   -webkit-appearance: none;
+//   appearance: none;
+//   outline: none;
+//   border-radius: 4px;
+//   border: 2px solid #e3e6ea;
+//   background: var(--fade);
+//   font-size: 14px;
+// }
+
+// select {
+//   cursor: pointer;
+// }
+
+// hamburger icon
+
+.hamburger-box {
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: var(--text-secondary);
+  width: 30px;
+  height: 2px;
+  margin: 0;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: var(--text-secondary);
+  width: 30px;
+  height: 2px;
+  margin: 0;
+}
+
+.hamburger:hover {
+  opacity: 1 !important;
+}
