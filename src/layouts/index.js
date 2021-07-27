@@ -22,6 +22,8 @@ const Layout = ({ children }) => {
 
     document.documentElement.classList.remove("_fixed");
     document.body.classList.remove("_fixed");
+
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return (

@@ -1,0 +1,16 @@
+.employees-page {
+  width: var(--full);
+
+  .wrapper {
+    width: 90%;
+    max-width: 1680px;
+    margin: 0 auto;
+
+    h1 {
+      font-weight: 500;
+      font-size: 25px;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+  }
+}

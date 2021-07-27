@@ -2,13 +2,55 @@
   width: var(--full);
 
   .wrapper {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
+    max-width: 1680px;
 
     h1 {
-      font-weight: 400;
+      font-weight: 500;
       font-size: 25px;
       color: var(--text-secondary);
+      text-align: center;
+    }
+
+    .employees-form {
+      width: var(--full);
+      max-width: 512px;
+      margin: 48px auto;
+
+      form {
+        width: var(--full);
+
+        .form-group {
+          width: var(--full);
+          margin-bottom: 20px;
+
+          &.mt-4 {
+            margin-top: 48px;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          > button {
+            width: var(--full);
+            background: var(--text-primary);
+            color: var(--white);
+            border: 1px solid var(--text-primary);
+            font-weight: 500;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .input-error {
+            color: red;
+            margin-top: 5px;
+          }
+        }
+      }
     }
   }
 }
