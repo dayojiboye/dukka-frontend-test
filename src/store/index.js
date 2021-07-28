@@ -1,3 +1,5 @@
+// using Redux for global state management
+
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import employees from "./reducers/employees";
 

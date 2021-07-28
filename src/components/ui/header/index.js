@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./styles.scss";
 
 const header = ({ isOpen, clicked }) => {
@@ -16,10 +16,12 @@ const header = ({ isOpen, clicked }) => {
           <div className={`nav-links ${isOpen ? "show" : ""}`}>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink to="/" activeClassName="active" exact>
+                  Home
+                </NavLink>
               </li>
               <li>
-                <Link to="/employees">Employees</Link>
+                <NavLink to="/employees" activeClassName="active" exact>Employees</NavLink>
               </li>
             </ul>
           </div>
@@ -28,7 +30,9 @@ const header = ({ isOpen, clicked }) => {
             <button
               type="button"
               aria-label="navigation button"
-              className={`hamburger hamburger--spin ${isOpen ? "is-active" : ""}`}
+              className={`hamburger hamburger--spin ${
+                isOpen ? "is-active" : ""
+              }`}
               onClick={clicked}
             >
               <span className="hamburger-box">

@@ -134,6 +134,10 @@
             color: var(--text-secondary);
             font-weight: 500;
 
+            &.active {
+              text-decoration: underline;
+            }
+
             @media (max-width: 700px) {
               padding: 0 16px;
               width: var(--full);
