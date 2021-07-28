@@ -6,3 +6,10 @@ export const addEmployee = (payload) => {
     payload,
   };
 };
+
+export const deleteEmployee = (payload) => {
+  return {
+    type: actionTypes.DELETE_EMPLOYEE,
+    payload,
+  };
+};

@@ -11,6 +11,13 @@ const reducer = (state = initialState, action) => {
         ...state,
         employees: [action.payload, ...state.employees],
       };
+    case actionTypes.DELETE_EMPLOYEE:
+      return {
+        ...state,
+        employees: state.employees.filter((item) => {
+          return item.id !== action.payload;
+        }),
+      };
     default:
       return state;
   }

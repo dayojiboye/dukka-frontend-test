@@ -1,1 +1,1 @@
-export { addEmployee } from "./employees";
+export { addEmployee, deleteEmployee } from "./employees";

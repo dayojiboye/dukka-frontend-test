@@ -10,7 +10,8 @@
       font-weight: 500;
       font-size: 25px;
       color: var(--text-secondary);
-      text-align: center;
+      max-width: 512px;
+      margin: 0 auto;
     }
 
     .employees-form {
@@ -48,6 +49,7 @@
           .input-error {
             color: red;
             margin-top: 5px;
+            font-size: 14px;
           }
         }
       }
