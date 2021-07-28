@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import EmployeeCard from "./employeeCard";
+import EmployeeCard from "../employeeCard";
 import Modal from "../ui/modal";
 import { useSelector, useDispatch } from "react-redux";
 import * as actions from "../../store/actions";
@@ -28,23 +28,27 @@ const Employees = () => {
 
         <div className="employees-list">
           <ul>
-            {currentEmployees.map((employee) => {
+            {currentEmployees.map((employee, index) => {
               return (
-                <EmployeeCard
-                  key={employee.id}
-                  image={employee.image}
-                  name={employee.fullName}
-                  position={employee.position}
-                  phone={employee.phoneNumber}
-                  email={employee.email}
-                  deleteHandler={() => deleteEmployeeHandler(employee.id)}
-                  editHandler={() => {
-                    setOpenDialog(true);
+                <li key={employee.id}>
+                  <EmployeeCard
+                    showActionBtns
+                    nameLink
+                    image={employee.image}
+                    name={employee.fullName}
+                    position={employee.position}
+                    phone={employee.phoneNumber}
+                    index={index}
+                    email={employee.email}
+                    deleteHandler={() => deleteEmployeeHandler(employee.id)}
+                    editHandler={() => {
+                      setOpenDialog(true);
 
-                    document.documentElement.classList.add("_fixed");
-                    document.body.classList.add("_fixed");
-                  }}
-                />
+                      document.documentElement.classList.add("_fixed");
+                      document.body.classList.add("_fixed");
+                    }}
+                  />
+                </li>
               );
             })}
           </ul>
